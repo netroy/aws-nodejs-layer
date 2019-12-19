@@ -1,0 +1,28 @@
+{
+  "name": "aws-nodejs-layer",
+  "version": "1.0.0",
+  "description": "The CDK Construct Library to create nodejs Lambda functions with layers",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [ "dist" ],
+  "license": "MIT",
+  "dependencies": {
+    "@aws-cdk/aws-lambda": "1.19.0",
+    "@aws-cdk/core": "1.19.0"
+  },
+  "scripts": {
+    "pretest": "tslint -p . && tsc",
+    "clean": "rm -rf dist",
+    "build": "tsc",
+    "prepack": "npm run clean && npm run build"
+  },
+  "engines": {
+    "node": ">= 10.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.21",
+    "ts-node": "^8.5.4",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.3"
+  }
+}
